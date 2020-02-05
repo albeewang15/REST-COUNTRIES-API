@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>REST COUNTRIES APP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="root">
+        <div class="nav">
+            <h1>Where in the World?</h1>
+            <p id="mode-switch">Light Mode</p>
+        </div>
+    
+        <div class="navigation">
+            <input type="text" placeholder="Search for a country..." id="search-bar" onkeyup="countrySearch()">
+            <select name="" id="region-filter" onchange="regionFilter()">
+                <option value="All" class="regions">All Regions</option>
+                <option value="Africa" class="regions">Africa</option>
+                <option value="America" class="regions">America</option>
+                <option value="Asia" class="regions">Asia</option>
+                <option value="Europe" class="regions">Europe</option>
+                <option value="Oceania" class="regions">Oceania</option>
+            </select>
+        </div>
+    </div>
+    
+    <div id="modal">
+        <div class="modal-content">
+            <span id="close-btn">&times;</span>
+            <div id="modal-flag"></div>
+            <div id="country-detail"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
