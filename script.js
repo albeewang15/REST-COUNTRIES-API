@@ -183,7 +183,13 @@ function regionFilter(){
     }
 }
 
+//Toggle to change theme color
+const html = document.getElementById('main');
+const toggle = document.getElementById('mode-switch');
+toggle.addEventListener('click', toggleTheme);
+
+function toggleTheme(){
+    html.setAttribute('data-theme', html.getAttribute('data-theme') === 'light-mode' ? 'dark-mode' : 'light-mode');
+}
 
 
-            
-  
